@@ -9,6 +9,9 @@
         </session-timeout>
     </session-config>
     
-    
+    <welcome-file-list>
+    <!-- Đổi login.jsp thành tên file bạn muốn làm trang chủ -->
+    <welcome-file>login.jsp</welcome-file>
+</welcome-file-list>
 
 </web-app>

@@ -4,8 +4,8 @@ WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
-# Chạy ứng dụng trên máy chủ Apache Tomcat 9
-FROM tomcat:9.0-jdk17-openjdk-slim
+# Chạy ứng dụng trên máy chủ Apache Tomcat 9 (ĐÃ ĐỔI BASE IMAGE)
+FROM tomcat:9.0-jre17-temurin
 RUN rm -rf /usr/local/tomcat/webapps/*
 COPY --from=build /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
 
